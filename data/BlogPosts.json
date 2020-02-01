@@ -1,12 +1,14 @@
 [
   {
-    "id":      "test",
-    "title":   "test post",
-    "content": "Hey some post content"
+    "id":           "test",
+    "title":        "test post",
+    "content":      "Hey some post content",
+    "published_on": "2019-12-14 12:52:49"
   },
   {
-    "id":      "second",
-    "title":   "second post",
-    "content": "Hey this is the second post content"
+    "id":           "second",
+    "title":        "second post",
+    "content":      "Hey this is the second post content",
+    "published_on": "2019-12-16 18:35:12"
   }
 ]

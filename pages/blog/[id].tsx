@@ -14,6 +14,7 @@ const BlogPost: NextPage<Props> = ({post}) => {
         <Layout title={`${post.title} | Blog`}>
             <h1>{post.title}</h1>
             <p>{post.content}</p>
+            <p>Published on {post.published_on}</p>
 
             <Link href="/blog">
                 <a>Back to blog list</a>
@@ -25,7 +26,10 @@ const BlogPost: NextPage<Props> = ({post}) => {
 BlogPost.getInitialProps = async ({query}) => {
     const post: Blog = await fetcher(`/api/blog/${query.id}`)
 
-    return {post}
+    const moment = (await import("moment")).default
+
+
+    return {post: {...post, published_on: moment(post.published_on).format("dddd D MMMM YYYY")}}
 }
 
 export default BlogPost
