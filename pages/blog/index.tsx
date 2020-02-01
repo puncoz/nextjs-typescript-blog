@@ -28,7 +28,7 @@ const BlogPage: NextPage<BlogPageProps> = ({blogList}) => {
 }
 
 BlogPage.getInitialProps = async () => {
-    const blogList: Blog[] = await fetcher("http://localhost:3000/api/blog")
+    const blogList: Blog[] = await fetcher("/api/blog")
 
     return {blogList}
 }

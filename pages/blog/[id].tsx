@@ -23,7 +23,7 @@ const BlogPost: NextPage<Props> = ({post}) => {
 }
 
 BlogPost.getInitialProps = async ({query}) => {
-    const post: Blog = await fetcher(`http://localhost:3000/api/blog/${query.id}`)
+    const post: Blog = await fetcher(`/api/blog/${query.id}`)
 
     return {post}
 }
